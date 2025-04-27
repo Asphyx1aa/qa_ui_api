@@ -27,6 +27,6 @@ public class JenkinsProperties {
     }
 
     public static String getBaseURL() {
-        return System.getProperty("browser_size", "https://demoqa.com");
+        return System.getProperty("base_url", "https://demoqa.com");
     }
 }
