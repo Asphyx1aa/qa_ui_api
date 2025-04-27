@@ -1,6 +1,5 @@
 package helpers;
 
-import com.codeborne.selenide.Configuration;
 
 public class JenkinsProperties {
     public static String getServer() {
