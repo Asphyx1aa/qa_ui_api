@@ -15,6 +15,10 @@ public class JenkinsProperties {
         return System.getProperty("browser_size", "1920x1080");
     }
 
+    public static String getBrowser() {
+        return System.getProperty("browser", "chrome");
+    }
+
     public static String getBaseURL() {
         return System.getProperty("browser_size", "https://demoqa.com");
     }

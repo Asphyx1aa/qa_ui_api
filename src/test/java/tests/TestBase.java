@@ -22,6 +22,7 @@ public class TestBase {
         Configuration.baseUrl = JenkinsProperties.getBaseURL();
         RestAssured.baseURI = JenkinsProperties.getBaseURL();
         Configuration.browserSize = JenkinsProperties.getBrowserSize();
+        Configuration.browser = JenkinsProperties.getBrowser();
         Configuration.pageLoadStrategy = "eager";
         Configuration.remote = JenkinsProperties.getServer();
 
