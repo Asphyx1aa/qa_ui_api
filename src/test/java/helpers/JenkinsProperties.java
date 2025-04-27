@@ -14,6 +14,14 @@ public class JenkinsProperties {
         return System.getProperty("browser_size", "1920x1080");
     }
 
+    public static String getUserName() {
+        return System.getProperty("userName", "testtesttest123");
+    }
+
+    public static String getUserPassword() {
+        return System.getProperty("userPassword", "Testtesttest_123!");
+    }
+
     public static String getBrowser() {
         return System.getProperty("browser", "chrome");
     }

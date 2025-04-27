@@ -1,6 +1,7 @@
 package extensions;
 
 import context.AuthContext;
+import helpers.JenkinsProperties;
 import models.AuthResponse;
 import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
@@ -14,7 +15,10 @@ public class LoginExtension implements BeforeEachCallback {
     @Override
     public void beforeEach(ExtensionContext context) {
 
-        AuthResponse authResponse = getAuthorizationToken("testtesttest123", "Testtesttest123_!");
+        final String userName = JenkinsProperties.getUserName();
+        final String userPassword = JenkinsProperties.getUserPassword();
+
+        AuthResponse authResponse = getAuthorizationToken(userName, userPassword);
 
         AuthContext.setAuthResponse(authResponse);
 
