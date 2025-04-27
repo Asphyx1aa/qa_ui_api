@@ -19,7 +19,7 @@ public class JenkinsProperties {
     }
 
     public static String getUserPassword() {
-        return System.getProperty("userPassword", "Testtesttest_123!");
+        return System.getProperty("userPassword", "Testtesttest123_!");
     }
 
     public static String getBrowser() {
