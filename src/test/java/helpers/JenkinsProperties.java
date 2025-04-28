@@ -3,11 +3,17 @@ package helpers;
 
 public class JenkinsProperties {
     public static String getServer() {
-        String username = System.getProperty("login", null);
-        String password = System.getProperty("password", null);
-        String wdhost = System.getProperty("wdhost", null);
+        final String env = System.getProperty("env", "local");
 
-        return "https://" + username + ":" + password + "@" + wdhost;
+        if (!env.equals("local")) {
+            String username = System.getProperty("login", null);
+            String password = System.getProperty("password", null);
+            String wdhost = System.getProperty("wdhost", null);
+
+            return "https://" + username + ":" + password + "@" + wdhost;
+        } else {
+            return null;
+        }
     }
 
     public static String getBrowserSize() {
